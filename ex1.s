@@ -1,27 +1,28 @@
-# C function unsigned long long fibo(int num) 
-# #include <iostream>
-# #include <string>
-# 
-# 
-# 
-# int fib_n=0, fib_n1=0, fib_n2 = 1;
-# int n = 13;
-# 
-# int fib() {
-# if(n==1) return fib_n;	
-#   fib_n = fib_n1 + fib_n2;
-#   fib_n1 = fib_n2;
-#   fib_n2 = fib_n;
-#   n=n-1;
-#   return fib();
+# // Example program
+#  #include <iostream>
+#  #include <string>
+#  
+#  
+#  
+#  int fib_n2=0, fib_n=0, fib_n1 = 1;
+#  int n = 13;
+#  
+#  void fib() {
+#  if(n==0) return;	
+#    fib_n2 = fib_n + fib_n1;
+#    fib_n = fib_n1;
+#    fib_n1 = fib_n2;
+#    n=n-1;
+#    return fib();
+#   }
+#  
+#  
+#  
+#  int main()
+#  {
+#     fib();
+#    std::cout << "Hello, " << fib_n << "!\n";
 #  }
-# 
-# 
-# 
-# int main()
-# {
-#   std::cout << "Hello, " << fib() << "!\n";
-# }
 
 .data
 .word 2, 4, 6, 8
