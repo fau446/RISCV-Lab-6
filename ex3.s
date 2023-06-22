@@ -43,3 +43,14 @@ main_exit:
 
 factorial:
 	# YOUR CODE HERE
+    li t0, 2 # i
+    addi t1, a0, 1 # n
+    li t3, 1 # result
+    loop:
+    	mul t3, t3, t0
+    	addi t0, t0, 1 # i++
+        beq t0, t1, end
+        j loop
+   	end:
+    addi a0, t3, 0
+    ret
